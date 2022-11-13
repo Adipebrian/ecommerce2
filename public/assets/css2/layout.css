@@ -1,0 +1,116 @@
+/* ********* */
+/* Import    */
+/* ********* */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid black; */
+}
+
+/* ********* */
+/* Layouting */
+/* ********* */
+
+.parent {
+  padding: 2% 7%;
+}
+
+.hidden {
+  display: none;
+}
+.bg-style {
+  background-image: url(../../assets/img/bg.png);
+  background-position: center;
+  background-size: cover;
+}
+.font2 {
+  font-family: "Bebas Neue", cursive;
+}
+
+/* ***** */
+/* Color */
+/* ***** */
+
+.gr {
+  background: linear-gradient(
+    69deg,
+    #85f4ff 55.48%,
+    #81f1ff 60.31%,
+    #7deeff 65.15%,
+    #78ebff 69.99%,
+    #74e8ff 74.83%,
+    #70e4ff 79.67%,
+    #6ce1ff 84.5%,
+    #68deff 89.34%,
+    #64dbff 94.18%,
+    #5fd8ff 99.02%,
+    #5bd5ff 103.85%,
+    #57d2ff 108.69%,
+    #53cfff 113.53%,
+    #4fcbff 118.37%,
+    #4ac8ff 123.2%,
+    #46c5ff 128.04%,
+    #42c2ff 132.88%
+  );
+}
+
+/* ************ */
+/* Font - Style */
+/* ************ */
+
+.heading {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  margin: 20px 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.heading .variasi {
+  position: absolute;
+  width: 80px;
+  background-color: #42c2ff;
+  height: 8px;
+  border-radius: 20px 0px;
+  bottom: -5px;
+}
+
+/* ************ */
+/* Icon - Style */
+/* ************ */
+i.icon_search {
+  background: url(../../assets/img/search.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+i.icon_chart {
+  background: url(../../assets/img/chart.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+i.icon_user {
+  background: url(../../assets/img/user.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+i.icon_send {
+  background: url(../../assets/img/send.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
