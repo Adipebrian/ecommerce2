@@ -5,7 +5,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce</title>
+    <title>Niaga Jaya | Home</title>
+    <meta name="author" content="Niaga Jaya">
+    <meta name="name" content="Niaga Jaya">
+    <meta name="description" content="Website Ecomerce yang menyediakan banyak produk yang berkualitas">
+    <meta name="keywords" content="produk berkualitas" />
+    <meta name="robots" content="index, follow">
+    <meta name="thumbnail" content="https://niagajaya.id/assets/img/logo.png">
+
+    <meta itemprop="name" content="Niaga Jaya">
+    <meta itemprop="description" content="Website Ecomerce yang menyediakan banyak produk yang berkualitas">
+    <meta itemprop="image" content="https://niagajaya.id/assets/img/logo.png">
+
+    <meta property="og:url" content="https://niagajaya.id/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Niaga Jaya" />
+    <meta property="og:description" content="Website Ecomerce yang menyediakan banyak produk yang berkualitas">
+    <meta property="og:image" itemprop="image" content="https://niagajaya.id/banner.jpg" />
+    <meta property="og:image:secure_url" content="https://niagajaya.id/banner.jpg" />
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
+
+    <meta property="article:author" content="https://niagajaya.id">
+    <meta property="article:section" content="website">
+
+    <meta name="twitter:title" content="Niaga Jaya">
+    <meta name="twitter:description" content="Website Ecomerce yang menyediakan banyak produk yang berkualitas">
+    <meta name="twitter:image" content="https://niagajaya.id/assets/img/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css" />
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/layout.css" />
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css" />
