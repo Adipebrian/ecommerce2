@@ -32,6 +32,8 @@
           <div class="title font2"><?= $result->nm_barang ?></div>
           <ul>
             <li><b>Harga </b> : <?= $result->harga ?></li>
+            <li><b>Jenis Barang </b> : <?= get_jns($result->kd_jns) ?></li>
+            <li><b>Merk Barang </b> : <?= get_merk($result->merk_id) ?></li>
             <!-- <li><b>Diskon </b> : 50%</li> -->
             <!-- <li><b>Harga Diskon </b> : 50.000.000</li> -->
             <li><b>Estimasi </b> : 3-5 hari</li>

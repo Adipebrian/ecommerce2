@@ -115,6 +115,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group mb-3">
                                             <input type="file" class="form-control" id="foto" name="foto" onchange="previewImg()">
+                                            <input type="hidden" name="fotoLama1" value="<?= $result->image1 ?>">
                                         </div>
                                         <small style="color: red;">
                                             <?= $validation->getError('foto') ?>
@@ -129,6 +130,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group mb-3">
                                             <input type="file" class="form-control" id="foto2" name="foto2" onchange="previewImg2()">
+                                            <input type="hidden" name="fotoLama2" value="<?= $result->image2 ?>">
                                             <small style="color: red;">
                                                 <?= $validation->getError('foto2') ?>
                                             </small>
@@ -143,6 +145,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group mb-3">
                                             <input type="file" class="form-control" id="foto3" name="foto3" onchange="previewImg3()">
+                                            <input type="hidden" name="fotoLama3" value="<?= $result->image3 ?>">
                                             <small style="color: red;">
                                                 <?= $validation->getError('foto3') ?>
                                             </small>
@@ -157,6 +160,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group mb-3">
                                             <input type="file" class="form-control" id="foto4" name="foto4" onchange="previewImg4()">
+                                            <input type="hidden" name="fotoLama4" value="<?= $result->image4 ?>">
                                             <small style="color: red;">
                                                 <?= $validation->getError('foto4') ?>
                                             </small>

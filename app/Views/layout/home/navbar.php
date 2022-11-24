@@ -16,7 +16,7 @@
                             <?php if ($m->menu_id == $l->id) : ?>
                                 <ul>
                                     <li class="dropdown-link">
-                                        <a href="<?= base_url() ?>/home/cat/<?= $m->kd_cat ?>">
+                                        <a href="<?= base_url() ?>/home/search_product/all/<?= cat($m->kd_cat) ?>/all/all">
                                             <h4 style="text-transform: uppercase;"><?= cat($m->kd_cat) ?></h4>
                                         </a>
                                     </li>
@@ -26,7 +26,7 @@
                                     ?>
                                     <?php foreach ($jenis as $j) : ?>
                                         <li class="dropdown-link">
-                                            <a href="<?= base_url() ?>/home/jns/<?= $j ?>"><?= jns($j) ?></a>
+                                            <a href="<?= base_url() ?>/home/search_product/all/all/<?= $j ?>/all"><?= jns($j) ?></a>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

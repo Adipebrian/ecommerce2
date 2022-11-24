@@ -182,23 +182,91 @@
   .des .box p {
     font-size: 14px;
   }
-  .login .group{
+
+  .login .group {
     flex-direction: column;
   }
-  .login .box{
+
+  .login .box {
     height: max-content;
     margin: 20px 0px;
   }
+
   .login form .form-group input {
     width: 80vw;
-}
-.login {
-  height: max-content;
-}
-.login form .form-group {
-  margin-left: 0px;
-}
-.login form {
-  padding: 10px;
-}
+  }
+
+  .login {
+    height: max-content;
+  }
+
+  .login form .form-group {
+    margin-left: 0px;
+  }
+
+  .login form {
+    padding: 10px;
+  }
+
+  .product-all .nav-product {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-all .nav-product ul {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    margin-bottom: 20px;
+  }
+
+  .product-all .group .sidebar-product {
+    display: none;
+  }
+
+  .product-all .group .sidebar-product.active {
+    display: flex;
+    position: absolute;
+    width: 200px;
+  }
+
+  .product-all .group .sidebar-product .box {
+    width: 180px;
+    margin-top: 50px;
+  }
+
+  .product-all .group {
+    position: relative;
+  }
+
+  .product-all .btn-filter.none {
+    display: none;
+  }
+
+  .product-all .btn-filter {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: max-content;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+  }
+
+  .product-all .btn-filter i.icon-filter {
+    background-image: url(/assets/img/filter.png);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+  }
+
+  .product-all .boxContainer {
+    width: 100vw;
+  }
 }

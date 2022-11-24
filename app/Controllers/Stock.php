@@ -395,7 +395,7 @@ class Stock extends BaseController
         if ($fileFoto->getError() == 4) {
             $namaFoto = $this->mRequest->getVar('fotoLama');
         } else {
-            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama'));
+            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama1'));
             $namaFoto = 'img' . $kode . '.png';
             $fileFoto->move('assets/img/barang', $namaFoto);
         }

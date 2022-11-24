@@ -71,6 +71,24 @@ function get_menu($id)
     }
     return null;
 }
+function get_merk($id)
+{
+    $db = Database::connect();
+    $result = $db->table('merk')->where(['id' => $id])->get()->getRow();
+    if($result){
+        return $result->merk;
+    }
+    return null;
+}
+function get_jns($id)
+{
+    $db = Database::connect();
+    $result = $db->table('jenis')->where(['kd_jns' => $id])->get()->getRow();
+    if($result){
+        return $result->jns;
+    }
+    return null;
+}
 function list_menu()
 {
     $db = Database::connect();
@@ -83,4 +101,10 @@ function getidlast()
     $result = $db->table('users')->get()->getRow();
     dd($result->id);
     return $result->id;
+}
+function count_all_produk()
+{
+    $db = Database::connect();
+    $result = $db->table('barang')->countAllResults();
+    return $result;
 }

@@ -27,7 +27,6 @@
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
 
-
     <meta property="article:author" content="https://niagajaya.id">
     <meta property="article:section" content="website">
 

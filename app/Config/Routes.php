@@ -40,6 +40,7 @@ $routes->get('/user/cart', 'User::cart');
 $routes->get('/home/detail/(:any)', 'Home::detail/$1');
 $routes->get('/home/cat/(:any)', 'Home::cat/$1');
 $routes->get('/home/jns/(:any)', 'Home::jns/$1');
+$routes->get('/home/search_product/(:any)/(:any)/(:any)', 'Home::search_product/$1/$2/$3');
 $routes->post('/delete_user', 'Admin::delete_user');
 $routes->post('/add_barang', 'Stock::add_barang');
 $routes->post('/edit_barang', 'Stock::edit_barang');

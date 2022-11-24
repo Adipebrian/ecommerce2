@@ -16,7 +16,7 @@
     <?php if($barang): ?>
     <?php foreach ($barang as $b) : ?>
       <a href="<?= base_url() ?>/home/detail/<?= $b->kode ?>" class="box">
-        <img src="<?= base_url() ?>/assets/img/barang/<?= $b->image ?>" alt="" />
+        <img src="<?= base_url() ?>/assets/img/barang/<?= $b->image1 ?>" alt="" />
         <div class="title"><?= $b->nm_barang ?></div>
         <div class="harga">
           <!-- <div class="disc">Rp. 20.000.000</div> -->
