@@ -10,22 +10,22 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/fontawesome-free/css/all.min.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="/adminlte/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/summernote/summernote-bs4.min.css">
   <!-- Select2 -->
-  <link rel="stylesheet" href="/adminlte/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- SweetAlert2 -->
-  <link rel="stylesheet" href="/adminlte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- dropzonejs -->
-  <link rel="stylesheet" href="/adminlte/plugins/dropzone/min/dropzone.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/dropzone/min/dropzone.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminlte/dist/css/adminlte.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -74,32 +74,32 @@
   <!-- REQUIRED SCRIPTS -->
 
   <!-- jQuery -->
-  <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/jquery/jquery.min.js"></script>
   <!-- Select2 -->
-  <script src="/adminlte/plugins/select2/js/select2.full.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/select2/js/select2.full.min.js"></script>
   <!-- DataTables  & Plugins -->
-  <script src="/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-  <script src="/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script src="/adminlte/plugins/jszip/jszip.min.js"></script>
-  <script src="/adminlte/plugins/pdfmake/pdfmake.min.js"></script>
-  <script src="/adminlte/plugins/pdfmake/vfs_fonts.js"></script>
-  <script src="/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-  <script src="/adminlte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-  <script src="/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/jszip/jszip.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <!-- dropzonejs -->
-  <script src="/adminlte/plugins/dropzone/min/dropzone.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/dropzone/min/dropzone.min.js"></script>
   <!-- Summernote -->
-  <script src="/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="/adminlte/dist/js/adminlte.min.js"></script>
   <!-- SweetAlert2 -->
-  <script src="/adminlte/plugins/sweetalert2/sweetalert2.min.js"></script>
+  <script src="<?= base_url() ?>/adminlte/plugins/sweetalert2/sweetalert2.min.js"></script>
   <!-- Datatable script -->
   <script>
     $(function() {
