@@ -37,6 +37,44 @@ class Utility extends BaseController
         ];
         return view('utility/menu', $data);
     }
+    public function seo()
+    {
+        $result = $this->db->table('seo')->where('id',1)->get()->getRow();
+        $data = [
+            'uri' => $this->uri,
+            'result' => $result,
+        ];
+        return view('utility/seo', $data);
+    }
+    public function seo_update()
+    {
+        $fileFoto = $this->mRequest->getFile('foto');
+if($fileFoto){
+    if ($fileFoto->getError() == 4) {
+        $namaFoto = $this->mRequest->getVar('fotoLama');
+    } else {
+        $namaFoto = $fileFoto->getRandomName();
+        $fileFoto->move('assets/img', $namaFoto);
+        if ($this->mRequest->getVar('fotoLama') != 'default.png') {
+            unlink('assets/img/' . $this->mRequest->getVar('fotoLama'));
+        }
+    }
+}else{
+    $namaFoto = $this->mRequest->getVar('fotoLama');
+
+}
+        $data = [
+            'author' => $this->request->getVar('author'),
+            'name' => $this->request->getVar('name'),
+            'desc' => $this->request->getVar('desc'),
+            'keyword' => $this->request->getVar('keyword'),
+            'img' => $namaFoto,
+        ];
+        $this->db->table('seo')->where('id',1)->update($data);
+
+        session()->setFlashdata('success', 'Success!');
+        return redirect()->to('utility/seo');
+    }
     public function menu_add()
     {
         $data = [

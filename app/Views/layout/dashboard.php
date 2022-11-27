@@ -55,6 +55,9 @@
 
 
     <?= $this->include('layout/sidebar') ?>
+    <!-- Flashdata -->
+    <div class="flash-data-success" data-flashdata="<?= session()->getFlashdata('success'); ?>"></div>
+    <div class="flash-data-warning" data-flashdata="<?= session()->getFlashdata('failed'); ?>"></div>
     <?= $this->renderSection('content') ?>
 
 

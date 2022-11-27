@@ -243,7 +243,7 @@ class Home extends BaseController
     {
         return redirect()->to('home/search_product/' . $this->request->getVar('key') . '/all/all/all');
     }
-    public function search_product($key, $cat = null, $jns = null, $merk = null, $limit = 2)
+    public function search_product($key, $cat = null, $jns = null, $merk = null, $limit = 12)
     {
         $jns_exp = explode('--', $jns);
         $jns_where = '';
@@ -289,9 +289,13 @@ class Home extends BaseController
             $jns_result = $this->db->table('barang')->like('nm_barang', $key)->where('kd_cat', $id->kd_cat)->groupBy('kd_jns')->get()->getResult();
             $merk_result = $this->db->table('barang')->like('nm_barang', $key)->where('kd_cat', $id->kd_cat)->groupBy('merk_id')->get()->getResult();
         } else if ($key != 'all' && $cat == 'all' && $jns == 'all' && $merk != 'all') {
+            $result = $this->db->query('SELECT * FROM barang WHERE kd_cat != " " '.$merk_where.' AND nm_barang LIKE "%'.$key.'%"')->getResult();
+            $jml_barang = $this->db->query('SELECT Count(nm_barang) as jml FROM barang WHERE kd_cat != " " '.$merk_where.' AND nm_barang LIKE "%'.$key.'%"')->getResult();
+            $jns_result = $this->db->table('barang')->like('nm_barang', $key)->groupBy('kd_jns')->get()->getResult();
+            $merk_result = $this->db->table('barang')->like('nm_barang', $key)->groupBy('merk_id')->get()->getResult();
         } else if ($key != 'all' && $cat != 'all' && $jns == 'all' && $merk != 'all') {
             $id = $this->db->table('kategori')->where('kd_cat', $cat)->get()->getRow();
-            $result = $this->db->query('SELECT * FROM barang WHERE kd_cat != " " '.$merk_where.' AND nm_barang LIKE "%'.$key.'%"')->getResult();
+            $result = $this->db->query('SELECT * FROM barang WHERE kd_cat = '.$cat.$merk_where.' AND nm_barang LIKE "%'.$key.'%"')->getResult();
             $jml_barang = $this->db->query('SELECT Count(nm_barang) as jml FROM barang WHERE kd_cat != " " '.$merk_where.' AND nm_barang LIKE "%'.$key.'%"')->getResult();
             $jns_result = $this->db->table('barang')->like('nm_barang', $key)->groupBy('kd_jns')->get()->getResult();
             $merk_result = $this->db->table('barang')->like('nm_barang', $key)->groupBy('merk_id')->get()->getResult();

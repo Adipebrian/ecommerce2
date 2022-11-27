@@ -355,6 +355,7 @@ class Stock extends BaseController
         $fileFoto2 = $this->mRequest->getFile('foto2');
         $fileFoto3 = $this->mRequest->getFile('foto3');
         $fileFoto4 = $this->mRequest->getFile('foto4');
+        $result_barang = $this->db->table('barang')->where('kode',$kode)->get()->getRow();
         if (!$this->validate([
             'foto' => [
                 'rules' => 'max_size[foto,1024]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png,image/JPG]',
@@ -393,31 +394,39 @@ class Stock extends BaseController
         };
 
         if ($fileFoto->getError() == 4) {
-            $namaFoto = $this->mRequest->getVar('fotoLama');
+            $namaFoto = $this->mRequest->getVar('fotoLama1');
         } else {
-            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama1'));
+            if($result_barang->image1){
+                unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama1'));
+            }
             $namaFoto = 'img' . $kode . '.png';
             $fileFoto->move('assets/img/barang', $namaFoto);
         }
         if ($fileFoto2->getError() == 4) {
-            $namaFoto2 = $this->mRequest->getVar('fotoLama');
+            $namaFoto2 = $this->mRequest->getVar('fotoLama2');
         } else {
-            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama2'));
-            $namaFoto2 = 'img' . $kode . '.png';
+            if($result_barang->image2){
+                unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama2'));
+            }
+            $namaFoto2 = 'img' . $kode . '_2.png';
             $fileFoto2->move('assets/img/barang', $namaFoto2);
         }
         if ($fileFoto3->getError() == 4) {
-            $namaFoto3 = $this->mRequest->getVar('fotoLama');
+            $namaFoto3 = $this->mRequest->getVar('fotoLama3');
         } else {
-            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama3'));
-            $namaFoto3 = 'img' . $kode . '.png';
+            if($result_barang->image3){
+                unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama3'));
+            }
+            $namaFoto3 = 'img' . $kode . '_3.png';
             $fileFoto3->move('assets/img/barang', $namaFoto3);
         }
         if ($fileFoto4->getError() == 4) {
-            $namaFoto4 = $this->mRequest->getVar('fotoLama');
+            $namaFoto4 = $this->mRequest->getVar('fotoLama4');
         } else {
-            unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama4'));
-            $namaFoto4 = 'img' . $kode . '.png';
+            if($result_barang->image4){
+                unlink('assets/img/barang/' . $this->mRequest->getVar('fotoLama4'));
+            }
+            $namaFoto4 = 'img' . $kode . '_4.png';
             $fileFoto4->move('assets/img/barang', $namaFoto4);
         }
         $data = [
@@ -442,7 +451,7 @@ class Stock extends BaseController
             ->where('kode', $kode)
             ->update($data);
         session()->setFlashdata('success', 'Barang berhasil diupdate!');
-        return redirect()->to('stock/barang');
+        return redirect()->to('stock/edit_barang/'.$kode);
     }
 
 
@@ -619,22 +628,32 @@ class Stock extends BaseController
         foreach ($data as $x => $row) {
             if ($x <= 2) {
                 if ($x == 2) {
-                    if ($row[0] != 'Merk') {
+                    if ($row[0] != 'Merk' && $row[1] != 'Merk ID') {
                         session()->setFlashdata('failed', 'Format tidak falid!');
                         return redirect()->to('/stock/merk');
                     }
                 }
                 continue;
             } else if ($row[0]) {
-                $simpandata = [
-                    'merk' => $row[0],
-                ];
-                $this->db->table('merk')->insert($simpandata);
-                $obj = [
-                    'sts' => 1,
-                    'note' => 'Record inserted successfully!',
-                ];
-                array_push($progress, $obj);
+                $result = $this->db->table('merk')->where('id',$row[1])->get()->getRow();
+                if(!$result){
+                    $simpandata = [
+                        'merk' => $row[0],
+                        'id' => $row[1],
+                    ];
+                    $this->db->table('merk')->insert($simpandata);
+                    $obj = [
+                        'sts' => 1,
+                        'note' => 'Record inserted successfully!',
+                    ];
+                    array_push($progress, $obj);
+                }else{
+                    $obj = [
+                        'sts' => 0,
+                        'note' => 'Record inserted failed! (ID sudah digunakan)',
+                    ];
+                    array_push($progress, $obj);
+                }
             }
         }
 

@@ -75,10 +75,10 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="<?= base_url() ?>/utility/index"
-                                 class="nav-link  <?= ($uri->getSegment(2) == "index") ? 'active' : '' ?>">
+                             <a href="<?= base_url() ?>/utility/seo"
+                                 class="nav-link  <?= ($uri->getSegment(2) == "seo") ? 'active' : '' ?>">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>Page Utility</p>
+                                 <p>SEO</p>
                              </a>
                          </li>
                          <li class="nav-item">
@@ -225,7 +225,7 @@
                          </li>
                      </ul>
                  </li>
-                 <!-- <li class="nav-item  <?= ($uri->getSegment(1) == "transaksi") ? 'menu-open' : '' ?>">
+                 <li class="nav-item  <?= ($uri->getSegment(1) == "transaksi") ? 'menu-open' : '' ?>">
                      <a href="#" class="nav-link <?= ($uri->getSegment(1) == "transaksi") ? 'active' : '' ?>">
                          <i class="nav-icon fas fa-wallet"></i>
                          <p>
@@ -249,9 +249,9 @@
                              </a>
                          </li>
                      </ul>
-                 </li> -->
+                 </li>
                  <?php endif; ?>
-                 <!-- <li class="nav-item  <?= ($uri->getSegment(1) == "pesanan") ? 'menu-open' : '' ?>">
+                 <li class="nav-item  <?= ($uri->getSegment(1) == "pesanan") ? 'menu-open' : '' ?>">
                      <a href="#" class="nav-link <?= ($uri->getSegment(1) == "pesanan") ? 'active' : '' ?>">
                          <i class="nav-icon fas fa-user-alt"></i>
                          <p>
@@ -275,7 +275,7 @@
                              </a>
                          </li>
                      </ul>
-                 </li> -->
+                 </li>
                  <li class="nav-item  <?= ($uri->getSegment(1) == "user") ? 'menu-open' : '' ?>">
                      <a href="#" class="nav-link <?= ($uri->getSegment(1) == "user") ? 'active' : '' ?>">
                          <i class="nav-icon fas fa-user-alt"></i>
@@ -292,13 +292,13 @@
                                  <p>Profile</p>
                              </a>
                          </li>
-                         <!-- <li class="nav-item">
+                         <li class="nav-item">
                              <a href="<?= base_url() ?>/user/cart"
                                  class="nav-link <?= ($uri->getSegment(2) == "cart") ? 'active' : '' ?>">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>My Cart</p>
                              </a>
-                         </li> -->
+                         </li>
                          <li class="nav-item">
                              <a href="<?= base_url() ?>/logout"
                                  class="nav-link <?= ($uri->getSegment(1) == "logout") ? 'active' : '' ?>">

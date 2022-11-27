@@ -16,12 +16,24 @@
         <div class="img-display">
           <div class="img-showcase">
             <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image1 ?>" alt="image">
+            <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image2 ?>" alt="image">
+            <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image3 ?>" alt="image">
+            <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image4 ?>" alt="image">
           </div>
         </div>
         <div class="img-select">
           <div class="img-item">
             <a href="#" data-id="1">
               <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image1 ?>" alt="produk">
+            </a>
+            <a href="#" data-id="2">
+              <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image2 ?>" alt="produk">
+            </a>
+            <a href="#" data-id="3">
+              <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image3 ?>" alt="produk">
+            </a>
+            <a href="#" data-id="4">
+              <img src="<?= base_url() ?>/assets/img/barang/<?= $result->image4 ?>" alt="produk">
             </a>
           </div>
         </div>

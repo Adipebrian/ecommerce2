@@ -48,7 +48,7 @@
             <?php foreach ($merk as $x => $m) : ?>
               <li>
                 <input type="checkbox" id="merk<?= $x ?>" class="merk" rel="<?= $m->merk_id ?>" onchange="change()">
-                <label for="merk<?= $x ?>"><?= get_merk($m->merk_id) ?><?= $m->merk_id ?></label>
+                <label for="merk<?= $x ?>"><?= get_merk($m->merk_id) ?></label>
               </li>
             <?php endforeach; ?>
           <?php endif; ?>

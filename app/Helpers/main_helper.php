@@ -108,3 +108,9 @@ function count_all_produk()
     $result = $db->table('barang')->countAllResults();
     return $result;
 }
+function seo()
+{
+    $db = Database::connect();
+    $result = $db->table('seo')->where('id',1)->get()->getRow();
+    return $result;
+}
